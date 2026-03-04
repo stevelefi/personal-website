@@ -1,0 +1,168 @@
+:root {
+  --surface: #ffffff;
+  --text: #0f2237;
+  --muted: #496078;
+  --accent: #0a5ca8;
+  --border: #dbe3ec;
+  --bg-top: #f8fbff;
+  --bg-bottom: #edf2f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+}
+
+.container {
+  width: min(820px, 92%);
+  margin: 40px auto;
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 22px rgba(15, 34, 55, 0.05);
+}
+
+.hero {
+  padding-top: 20px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #23537f;
+}
+
+h1 {
+  margin: 8px 0 0;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.lead {
+  margin-top: 10px;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-grid {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.contact-grid p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #0a4e8d;
+  border-color: #0a4e8d;
+}
+
+.button.secondary {
+  color: var(--accent);
+  background: #ffffff;
+}
+
+.overview-list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.overview-list li {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.highlights {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.highlights li {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.work-item + .work-item {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.footnote {
+  text-align: center;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 6px 0 2px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 94%;
+    margin: 24px auto;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
